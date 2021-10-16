@@ -112,21 +112,18 @@ class Elevator
 
     def requestFloor(requestedFloor)
         @floorRequestList.push(requestedFloor)
-        puts @floorRequestList.to_s + 'added to floorRequestList'
         self.move()
         self.operateDoors()
     end
 
     def move()
         while @floorRequestList.length > 0 do
-            destination = @floorRequestList.shift
-            puts @id.to_s + ' ' + destination.to_s 
+            destination = @floorRequestList.shift            
             @status = 'moving'
             if @currentFloor < destination
                 @direction = 'up'
                 self.sortFloorList()
                 while @currentFloor < destination do
-                    puts @currentFloor
                     @currentFloor += 1
                     @screenDisplay = @currentFloor
                 end
@@ -134,7 +131,6 @@ class Elevator
                 @direction = 'down'
                 self.sortFloorList()
                 while @currentFloor > destination do
-                    puts @currentFloor
                     @currentFloor -= 1
                     @screenDisplay = @currentFloor
                 end
