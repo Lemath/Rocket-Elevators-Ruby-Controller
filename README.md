@@ -13,6 +13,7 @@ Once an elevator have been selected, it is sent to the corresponding floor to pi
 ### Installation 
 
 The controller file is located in the lib folder and the test file is located in the spec folder
+
 To run the controller and the test file you need Ruby 
 
 https://www.ruby-lang.org/en/downloads/
