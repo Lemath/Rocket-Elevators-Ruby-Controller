@@ -29,8 +29,12 @@ The test file require 2 gems:
 
 ### Testing
 
-To run the test file
+To launch the tests:
 
 `bin/rspec`
 
-For a more detailed 
+You can also get more details about each test by adding the -fd flag:
+
+`bin/rspec -fd`
+
+
